@@ -2,8 +2,6 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Dashboard from './components/Dashboard';
-import Erc20deploy from './components/erc20deploy'
-
 
 function Copyright() {
   return (
@@ -22,7 +20,6 @@ export default function App() {
   return (
     <div>
       <Dashboard />
-      <Erc20deploy />
     </div>
   );
 }

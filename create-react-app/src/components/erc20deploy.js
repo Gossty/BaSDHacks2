@@ -4,11 +4,8 @@ import { ethers } from "ethers";
 import abi from '../utils/ERC20Factory.json';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
-import { padding } from "@mui/system";
 
 const Erc20deploy = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -16,7 +13,7 @@ const Erc20deploy = () => {
   const [loading, setLoading] = useState(false);
   const [tokenName, setTokenName] = useState("");
   const [tokenTicker, setTokenTicker] = useState("");
-  const [initialSupply, setInitialSupply] = useState(0);
+  const [initialSupply, setInitialSupply] = useState(1000000);
   const contractAddress = "0x7810F66182Be650572EBBbd4b9D0b4C42D20Eb34";
   
   const contractABI = abi.abi;
@@ -90,6 +87,7 @@ const Erc20deploy = () => {
         display="flex"
         justifyContent="center"
         alignItems="center"
+        sx={{ m: 1 }}
         >
       {loading && (
         <Box>
@@ -112,6 +110,7 @@ const Erc20deploy = () => {
             required
             size="small"
             onChange={(e) => setTokenName(e.target.value)}
+            sx={{ m: 1 }}
             />
             <TextField
             id="outlined-basic" label="Token Ticker" variant="outlined"
@@ -120,6 +119,7 @@ const Erc20deploy = () => {
               required
               size="small"
               onChange={(e) => setTokenTicker(e.target.value)}
+              sx={{ m: 1 }}
             />
             <TextField
             id="outlined-basic" label="Initial Supply" variant="outlined"
@@ -128,9 +128,10 @@ const Erc20deploy = () => {
               required
               size="small"
               onChange={(e) => setInitialSupply(e.target.value)}
+              sx={{ m: 1 }}
             />
           </label>
-          <Button variant="contained" type="submit" className="createERC20Buttton">Create Token</Button>
+          <Button variant="contained" type="submit" className="createERC20Buttton" sx={{ m: 1 }}>Create Token</Button>
         </form>
       )}
       </Box>
