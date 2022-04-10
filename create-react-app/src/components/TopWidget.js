@@ -10,11 +10,11 @@ function preventDefault(event) {
 export default function TopWidget() {
   return (
     <React.Fragment>
-      <Typography component="p" variant="h3">
-      👋  Welcome to the Gotham DAO!
+      <Typography component="p" variant="h4" textAlign="center" font-family= "Helvetica">
+        ◥▅◤ Gotham City DAO ◥▅◤
       </Typography>
-      <Typography color="text.secondary" sx={{ flex: 1 }}>
-      People who live in the night are acquainted with all kinds of quiet...
+      <Typography color="black" variant="h6" textAlign="center">
+      Holding Gotham's Local Government Accountable Through Leveraging the $GTHM Token
       </Typography>
     </React.Fragment>
   );

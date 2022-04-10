@@ -15,7 +15,7 @@ function preventDefault(event) {
         
         <Typography>
         <Typography component="p" variant="h6">
-        <ArticleIcon /> Batman is Wild <Link color="primary" href="https://www.giantfreakinrobot.com/ent/johnny-depp-batman-vs-superman.html">
+        <ArticleIcon /> DAO Votes to Release Batman from Prison <Link color="primary" href="https://www.giantfreakinrobot.com/ent/johnny-depp-batman-vs-superman.html">
           View story
         </Link>
           </Typography>
@@ -34,7 +34,7 @@ function preventDefault(event) {
         </Typography>
 
           <Typography component="p" variant="h6">
-          <ArticleIcon />Crime Rate Drastic Rise <Link color="primary" href="https://batman.fandom.com/wiki/Passionate_Man_at_fundraising_party">
+          <ArticleIcon />Crime Rate Spikes <Link color="primary" href="https://batman.fandom.com/wiki/Passionate_Man_at_fundraising_party">
           View story
             </Link>
           </Typography>

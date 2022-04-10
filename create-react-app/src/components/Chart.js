@@ -3,23 +3,24 @@ import { useTheme } from '@mui/material/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
 
-// Generate Sales Data
+// Generate Data
 function createData(time, amount) {
   return { time, amount };
 }
 
 const data = [
-  createData('00:00', 0),
-  createData('03:00', 300),
-  createData('06:00', 900),
-  createData('09:00', 1200),
-  createData('12:00', 1800),
-  createData('15:00', 2000),
-  createData('18:00', 2400),
-  createData('21:00', 10000),
-  createData('22:00', 20000),
-  createData('23:00', 23000),
-  createData('24:00', 24000),
+  createData('Jan', 0),
+  createData('Feb', 1),
+  createData('Mar', 2),
+  createData('Apr', 1),
+  createData('May', 5),
+  createData('Jun', 2),
+  createData('July', 5),
+  createData('Aug', 1),
+  createData('Sep', 2),
+  createData('Oct', 1),
+  createData('Nov', 2),
+  createData('Dec', 13),
 ];
 
 export default function Chart() {
@@ -27,7 +28,7 @@ export default function Chart() {
 
   return (
     <React.Fragment>
-      <Title>Today</Title>
+      <Title>Crime Rate</Title>
       <ResponsiveContainer>
         <LineChart
           data={data}
@@ -56,7 +57,7 @@ export default function Chart() {
                 ...theme.typography.body1,
               }}
             >
-              Crime Rate
+              % Increase
             </Label>
           </YAxis>
           <Line

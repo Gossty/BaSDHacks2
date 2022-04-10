@@ -131,7 +131,7 @@ const Erc20deploy = () => {
               sx={{ m: 1 }}
             />
           </label>
-          <Button variant="contained" type="submit" className="createERC20Buttton" sx={{ m: 1 }}>Create Token</Button>
+          <Button variant="contained" type="submit" className="createERC20Buttton" sx={{ m: 1 }}>Create DAO</Button>
         </form>
       )}
       </Box>

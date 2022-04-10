@@ -18,17 +18,17 @@ function preventDefault(event) {
         </Typography>
         <Title>Recent Proposals</Title>
         <Typography component="p" variant="h6">
-          <Link color="primary" href="https://screenrant.com/the-batman-deleted-scene-joker-arkham-escape/"><LightbulbIcon/> Proposal to increase Arkham Police funding</Link>
+          <Link color="primary" href="https://screenrant.com/the-batman-deleted-scene-joker-arkham-escape/"><LightbulbIcon/> Increase Arkham Police funding</Link>
         </Typography>
         <Typography color="text.secondary" sx={{ flex: 1 }}>
         I am a simple Gotham citizen that is afraid for my life. With an increase of police funding, we can have a safer city!
         </Typography>
         <Typography component="p" variant="h6">
-        <Link color="primary" href="https://screenrant.com/the-batman-deleted-scene-joker-arkham-escape/"><LightbulbIcon/> Proposal to decrease Arkham Police funding</Link>
+        <Link color="primary" href="https://screenrant.com/the-batman-deleted-scene-joker-arkham-escape/"><LightbulbIcon/> Fix Gotham City's Pothole Problem</Link>
           </Typography>
         
         <Typography color="text.secondary" sx={{ flex: 1 }}>
-        I am a simple person from Arkham that is afraid for my life. With a decreased police funding, I can escape from here!
+        I'm a daily commuter who's tired of spilling coffee in his car due to all these potholes. We don't need a bigger baseball stadium! Let's fix these potholes now!
         </Typography>  
         
         </Typography>
