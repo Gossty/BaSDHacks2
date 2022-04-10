@@ -2,7 +2,7 @@ import * as React from 'react';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import Title from './Title';
-import ThermostatIcon from '@mui/icons-material/Thermostat';
+
 import PeopleIcon from '@mui/icons-material/People';
 import ManIcon from '@mui/icons-material/Man';
 import WomanIcon from '@mui/icons-material/Woman';

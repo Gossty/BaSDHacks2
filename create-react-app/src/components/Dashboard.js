@@ -18,6 +18,7 @@ import TopWidget from './TopWidget';
 import Demographics from './Demographics';
 import News from './News';
 import StreetIndex from "./StreetIndex";
+import Votes from "./Votes";
 
 
 const theme = createTheme({
@@ -157,6 +158,21 @@ function DashboardContent() {
                 
               </Grid>
 
+              {/* News */}
+              <Grid item xs={12} md={4} lg={4}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 480,
+                  }}
+                >
+                  <News />
+                </Paper>
+                
+              </Grid>
+
               <Grid item xs={12} md={5} lg={5}>
                 <Paper
                   sx={{
@@ -177,35 +193,16 @@ function DashboardContent() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
-                  }}
-                >
-                  <Deposits />
-                </Paper>
-                
-              </Grid>
-
-              {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={4}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
                     height: 480,
                   }}
                 >
-                  <News />
+                  <Votes />
                 </Paper>
                 
               </Grid>
 
-              {/* Recent Orders */}
-              <Grid item xs={12} md={8} lg={8}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Orders />
-                </Paper>
-              </Grid>
+
+
             </Grid>
             <Copyright sx={{ pt: 4 }} />
           </Container>
