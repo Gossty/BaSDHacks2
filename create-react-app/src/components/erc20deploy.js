@@ -89,7 +89,6 @@ const Erc20deploy = () => {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        minHeight="100vh"
         >
       {loading && (
         <Box>
