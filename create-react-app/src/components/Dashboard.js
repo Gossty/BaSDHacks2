@@ -179,7 +179,7 @@ function DashboardContent() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 480,
                   }}
                 >
                   <Demographics />
