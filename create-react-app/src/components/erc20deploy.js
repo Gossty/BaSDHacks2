@@ -84,7 +84,7 @@ const Erc20deploy = () => {
   
   return (
       <Box
-        display="flex"
+        // display="flex"
         justifyContent="center"
         alignItems="center"
         sx={{ m: 1 }}
