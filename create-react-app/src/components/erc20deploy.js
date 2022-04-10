@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
 import { ethers } from "ethers";
 import abi from '../utils/ERC20Factory.json';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
 
 const Erc20deploy = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -79,46 +85,55 @@ const Erc20deploy = () => {
   }, [])
   
   return (
-    <div className="mainContainer">
-      <div className="dataContainer">
-        {loading && (
-          <div>
-            <div className="loadingContainer">
-              <ReactLoading type="spinningBubbles" color="#000000" height={32} width={32} />
-            </div>
-            <div className="loadingContainer">
-              <br />
-              <p>Etherscan link of txn: https://polygonscan.com/tx/{currentTxn}</p>
-            </div>
-          </div>
-        )}
-        {!loading && (
-          <form onSubmit={deployNewERC20Token} className="formContainer">
-            <label>
-              <input
-                type="text"
-                value={tokenName}
-                placeholder="Token Name(City Name)"
-                onChange={(e) => setTokenName(e.target.value)}
-              />
-              <input
-                type="text"
-                value={tokenTicker}
-                placeholder="Token Ticker"
-                onChange={(e) => setTokenTicker(e.target.value)}
-              />
-              <input
-                type="number"
-                value={initialSupply}
-                placeholder="Initial Supply"
-                onChange={(e) => setInitialSupply(e.target.value)}
-              />
-            </label>
-            <input type="submit" className="createERC20Buttton" value="Create Token" />
-          </form>
-        )}
-      </div>
-    </div>
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        minHeight="100vh"
+        >
+      {loading && (
+        <Box>
+          <Box className="loadingContainer">
+            <ReactLoading type="spinningBubbles" color="#000000" height={32} width={32} />
+          </Box>
+          <Box className="loadingContainer">
+            <br />
+            <Typography variant="body2" color="text.secondary" align="center">Etherscan link of txn: https://polygonscan.com/tx/{currentTxn}</Typography>
+          </Box>
+        </Box>
+      )}
+      {!loading && (
+        <form onSubmit={deployNewERC20Token} className="formContainer">
+          <label>
+            <TextField
+            id="outlined-basic" label="City Name" variant="outlined"
+            type="text"
+            value={tokenName}
+            required
+            size="small"
+            onChange={(e) => setTokenName(e.target.value)}
+            />
+            <TextField
+            id="outlined-basic" label="Token Ticker" variant="outlined"
+              type="text"
+              value={tokenTicker}
+              required
+              size="small"
+              onChange={(e) => setTokenTicker(e.target.value)}
+            />
+            <TextField
+            id="outlined-basic" label="Initial Supply" variant="outlined"
+              type="number"
+              value={initialSupply}
+              required
+              size="small"
+              onChange={(e) => setInitialSupply(e.target.value)}
+            />
+          </label>
+          <Button variant="contained" type="submit" className="createERC20Buttton">Create Token</Button>
+        </form>
+      )}
+      </Box>
   );
 }
 
