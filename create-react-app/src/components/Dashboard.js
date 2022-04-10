@@ -22,6 +22,7 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import TopWidget from './TopWidget';
 
 function Copyright(props) {
   return (
@@ -162,7 +163,26 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+
+
+
+            
             <Grid container spacing={3}>
+              {/*Top Widget */}
+              <Grid item xs={12} md={12} lg={12}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 100,
+                  }}
+                >
+                  <TopWidget/>
+                </Paper>
+              </Grid>
+
+
               {/* Chart */}
               <Grid item xs={12} md={8} lg={9}>
                 <Paper
@@ -192,7 +212,7 @@ function DashboardContent() {
                 
               </Grid>
 
-              <Grid item xs={12} md={7} lg={10}>
+              <Grid item xs={12} md={7} lg={7}>
                 <Paper
                   sx={{
                     p: 2,
@@ -206,7 +226,7 @@ function DashboardContent() {
                 
               </Grid>
 
-              <Grid item xs={12} md={5} lg={10}>
+              <Grid item xs={12} md={5} lg={5}>
                 <Paper
                   sx={{
                     p: 2,
