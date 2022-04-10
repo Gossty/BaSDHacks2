@@ -61,30 +61,17 @@ function ConnectButton() {
                 </button>
             )}
             {currentAccount && (
-                <button
-                    bg="gray.800"
-                    border="1px solid transparent"
-                    _hover={{
-                        border: "1px",
-                        borderStyle: "solid",
-                        borderColor: "blue.400",
-                        backgroundColor: "gray.700",
-                    }}
-                    borderRadius="xl"
-                    m="1px"
-                    px={3}
-                    height="38px"
-                >
-                    <p color="white" fontSize="md" fontWeight="medium" mr="2">
+                <button>
+                    <p>
                         {currentAccount &&
                             `${currentAccount.slice(0, 6)}...${currentAccount.slice(
                             currentAccount.length - 4,
                             currentAccount.length
                         )}`}
-                    </Text>
-                </Button>
+                    </p>
+                </button>
             )}
-        </Box>
+        </div>
     );
 }
 
