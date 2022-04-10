@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -23,6 +22,8 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 import TopWidget from './TopWidget';
+import Demographics from './Demographics';
+import News from './News'
 
 
 const theme = createTheme({
@@ -178,9 +179,6 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-
-
-
             
             <Grid container spacing={3}>
               {/*Top Widget */}
@@ -224,10 +222,24 @@ function DashboardContent() {
                 >
                   <Deposits />
                 </Paper>
+              </Grid>
+
+              {/* Demographics */ }
+              <Grid item xs={12} md={4} lg={4}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 240,
+                  }}
+                >
+                  <Demographics/>
+                </Paper>
                 
               </Grid>
 
-              <Grid item xs={12} md={7} lg={7}>
+              <Grid item xs={12} md={4} lg={4}>
                 <Paper
                   sx={{
                     p: 2,
@@ -238,30 +250,34 @@ function DashboardContent() {
                 >
                   <Deposits />
                 </Paper>
-                
               </Grid>
 
-              <Grid item xs={12} md={5} lg={5}>
+              <Grid item xs={12} md={4} lg={4}>
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 480,
                   }}
                 >
-                  <Deposits />
+                  <News/>
                 </Paper>
-                
               </Grid>
-
 
               {/* Recent Orders */}
-              <Grid item xs={12}>
+              <Grid item xs={12} md={8} lg={8}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   <Orders />
                 </Paper>
               </Grid>
+              
+
+
+              
+
+              
+
             </Grid>
             <Copyright sx={{ pt: 4 }} />
           </Container>
