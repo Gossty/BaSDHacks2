@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -21,22 +22,19 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
-import TopWidget from './TopWidget';
-import Demographics from './Demographics';
-import News from './News'
 
 
 const theme = createTheme({
   palette: {
     primary: {
       light: '#263238',
-      main: '#EDD3C4',
+      main: '#01161E',
       dark: '#263238',
       contrastText: '#fff',
     },
     secondary: {
       light: '#A39BA8',
-      main: '#FC6DAB',
+      main: 'yar#01161E',
       dark: '#A39BA8',
       contrastText: '#000',
     },
@@ -102,7 +100,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-const mdTheme = createTheme();
 
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
@@ -171,7 +168,7 @@ function DashboardContent() {
         <Box
           component="main"
           sx={{
-            backgroundColor: '#263238',
+            backgroundColor: '#A7A5C6',
             flexGrow: 1,
             height: '100vh',
             overflow: 'auto',
@@ -179,23 +176,7 @@ function DashboardContent() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            
             <Grid container spacing={3}>
-              {/*Top Widget */}
-              <Grid item xs={12} md={12} lg={12}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 100,
-                  }}
-                >
-                  <TopWidget/>
-                </Paper>
-              </Grid>
-
-
               {/* Chart */}
               <Grid item xs={12} md={8} lg={9}>
                 <Paper
@@ -222,24 +203,10 @@ function DashboardContent() {
                 >
                   <Deposits />
                 </Paper>
-              </Grid>
-
-              {/* Demographics */ }
-              <Grid item xs={12} md={4} lg={4}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
-                  }}
-                >
-                  <Demographics/>
-                </Paper>
                 
               </Grid>
 
-              <Grid item xs={12} md={4} lg={4}>
+              <Grid item xs={12} md={7} lg={10}>
                 <Paper
                   sx={{
                     p: 2,
@@ -250,34 +217,30 @@ function DashboardContent() {
                 >
                   <Deposits />
                 </Paper>
+                
               </Grid>
 
-              <Grid item xs={12} md={4} lg={4}>
+              <Grid item xs={12} md={5} lg={10}>
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 480,
+                    height: 240,
                   }}
                 >
-                  <News/>
+                  <Deposits />
                 </Paper>
+                
               </Grid>
 
+
               {/* Recent Orders */}
-              <Grid item xs={12} md={8} lg={8}>
+              <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   <Orders />
                 </Paper>
               </Grid>
-              
-
-
-              
-
-              
-
             </Grid>
             <Copyright sx={{ pt: 4 }} />
           </Container>
