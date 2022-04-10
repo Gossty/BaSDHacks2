@@ -25,6 +25,7 @@ import ConnectButton from './walletconnect'
 import TopWidget from './TopWidget';
 import Demographics from './Demographics';
 import News from './News';
+import StreetIndex from "./StreetIndex";
 
 
 const theme = createTheme({
@@ -149,7 +150,7 @@ function DashboardContent() {
                 </Paper>
               </Grid>
 
-              {/* Recent Deposits */}
+              {/* Street Index */}
               <Grid item xs={12} md={3} lg={3}>
                 <Paper
                   sx={{
@@ -159,7 +160,7 @@ function DashboardContent() {
                     height: 240,
                   }}
                 >
-                  <Deposits />
+                  <StreetIndex />
                 </Paper>
                 
               </Grid>
@@ -167,7 +168,7 @@ function DashboardContent() {
               <Grid item xs={12} md={5} lg={5}>
                 <Paper
                   sx={{
-                    p: 4,
+                    p: 2,
                     display: 'flex',
                     flexDirection: 'column',
                     height: 240,
@@ -207,39 +208,8 @@ function DashboardContent() {
                 
               </Grid>
 
-
-
-              <Grid item xs={12} md={7} lg={10}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
-                  }}
-                >
-                  <Deposits />
-                </Paper>
-                
-              </Grid>
-
-              <Grid item xs={12} md={5} lg={10}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
-                  }}
-                >
-                  <Deposits />
-                </Paper>
-                
-              </Grid>
-
-
               {/* Recent Orders */}
-              <Grid item xs={12}>
+              <Grid item xs={12} md={8} lg={8}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   <Orders />
                 </Paper>

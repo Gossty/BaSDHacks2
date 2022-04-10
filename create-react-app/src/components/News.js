@@ -34,7 +34,7 @@ function preventDefault(event) {
         </Typography>
 
           <Typography component="p" variant="h6">
-          <ArticleIcon />Crime Rate Drastic Rise <Link color="primary" href="https://screenrant.com/the-batman-deleted-scene-joker-arkham-escape/">
+          <ArticleIcon />Crime Rate Drastic Rise <Link color="primary" href="https://batman.fandom.com/wiki/Passionate_Man_at_fundraising_party">
           View story
             </Link>
           </Typography>
