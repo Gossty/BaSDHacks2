@@ -5,7 +5,7 @@ import abi from '../utils/ERC20Factory.json';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
 const Erc20deploy = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -90,13 +90,13 @@ const Erc20deploy = () => {
         sx={{ m: 1 }}
         >
       {loading && (
-        <Box>
+        <Box justifyContent="center" alignItems="center">
           <Box className="loadingContainer">
             <ReactLoading type="spinningBubbles" color="#000000" height={32} width={32} />
           </Box>
           <Box className="loadingContainer">
             <br />
-            <Typography variant="body2" color="text.secondary" align="center">Etherscan link of txn: https://polygonscan.com/tx/{currentTxn}</Typography>
+            <Link variant="body2" color="text.secondary" align="center">Etherscan link of txn: https://polygonscan.com/tx/{currentTxn}</Link>
           </Box>
         </Box>
       )}
