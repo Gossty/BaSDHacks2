@@ -23,6 +23,24 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: '#263238',
+      main: '#EDD3C4',
+      dark: '#263238',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#A39BA8',
+      main: '#FC6DAB',
+      dark: '#A39BA8',
+      contrastText: '#000',
+    },
+  },
+});
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -91,7 +109,7 @@ function DashboardContent() {
   };
 
   return (
-    <ThemeProvider theme={mdTheme}>
+    <ThemeProvider theme={theme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
         <AppBar position="absolute" open={open}>
@@ -151,10 +169,7 @@ function DashboardContent() {
         <Box
           component="main"
           sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
+            backgroundColor: '#263238',
             flexGrow: 1,
             height: '100vh',
             overflow: 'auto',
