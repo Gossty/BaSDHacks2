@@ -11,21 +11,34 @@ function preventDefault(event) {
   export default function Demographics() {
     return (
       <React.Fragment>
-        <Title>Demographics</Title>
-  
+        <Title>News</Title>
+        
+        <Typography>
         <Typography component="p" variant="h6">
-        <ArticleIcon /> Batman is wild <Link color="primary" href="https://www.giantfreakinrobot.com/ent/johnny-depp-batman-vs-superman.html">
+        <ArticleIcon /> Batman is Wild <Link color="primary" href="https://www.giantfreakinrobot.com/ent/johnny-depp-batman-vs-superman.html">
           View story
         </Link>
-        </Typography>
+          </Typography>
+          
         <Typography color="text.secondary" sx={{ flex: 1 }}>
-        While you think batman is real and is protecting you, look through how batman actually doesn't care!
+        While you think batman is real and is protecting you, look at how batman actually doesn't care!
         </Typography>
         <Typography component="p" variant="h6">
-          <ArticleIcon /> Another Tuesday – Another Arkhem Runaway <Link color="primary" href="https://www.giantfreakinrobot.com/ent/johnny-depp-batman-vs-superman.html">
+          <ArticleIcon /> Another Tuesday – Another Arkham Runaway <Link color="primary" href="https://screenrant.com/the-batman-deleted-scene-joker-arkham-escape/">
           View story
-        </Link>
+            </Link>
+          </Typography>
+          
+          <Typography color="text.secondary" sx={{ flex: 1 }}>
+          Yes, it is Tuesday again and Joker has escaped from Arkham for the fourth consecutive time. Why does he keep doing that?
+        </Typography>
 
+          <Typography component="p" variant="h6">
+          <ArticleIcon />Crime Rate Drastic Rise <Link color="primary" href="https://screenrant.com/the-batman-deleted-scene-joker-arkham-escape/">
+          View story
+            </Link>
+          </Typography>
+          The drastic crime rate caused by Bruce Wayne's party indicates his direct relation with Batman.
         </Typography>
   
       </React.Fragment>

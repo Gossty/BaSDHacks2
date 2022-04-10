@@ -10,9 +10,11 @@ function preventDefault(event) {
 export default function TopWidget() {
   return (
     <React.Fragment>
-      <Title>Welcome to Gotham city!</Title>
+      <Typography component="p" variant="h3">
+      👋  Welcome to the Gotham DAO!
+      </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
-      People who live in the night are acquainted with all kinds of quiet
+      People who live in the night are acquainted with all kinds of quiet...
       </Typography>
     </React.Fragment>
   );

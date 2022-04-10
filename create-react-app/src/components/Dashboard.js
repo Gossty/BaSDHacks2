@@ -23,6 +23,9 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 import ConnectButton from './walletconnect'
+import TopWidget from './TopWidget';
+import Demographics from './Demographics';
+import News from './News';
 
 
 const theme = createTheme({
@@ -174,8 +177,23 @@ function DashboardContent() {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
+
+
+            <Grid item xs={12} md={12} lg={12}>
+                <Paper
+                  sx={{
+                    p: 4,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 120,
+                  }}
+                >
+                  <TopWidget />
+                </Paper>
+              </Grid>
+
               {/* Chart */}
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={12} md={9} lg={9}>
                 <Paper
                   sx={{
                     p: 2,
@@ -189,7 +207,7 @@ function DashboardContent() {
               </Grid>
 
               {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
+              <Grid item xs={12} md={3} lg={3}>
                 <Paper
                   sx={{
                     p: 2,
@@ -202,6 +220,51 @@ function DashboardContent() {
                 </Paper>
                 
               </Grid>
+
+              <Grid item xs={12} md={5} lg={5}>
+                <Paper
+                  sx={{
+                    p: 4,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 240,
+                  }}
+                >
+                  <Demographics />
+                </Paper>
+              </Grid>
+
+              {/* Recent Deposits */}
+              <Grid item xs={12} md={3} lg={3}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 240,
+                  }}
+                >
+                  <Deposits />
+                </Paper>
+                
+              </Grid>
+
+              {/* Recent Deposits */}
+              <Grid item xs={12} md={4} lg={4}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 480,
+                  }}
+                >
+                  <News />
+                </Paper>
+                
+              </Grid>
+
+
 
               <Grid item xs={12} md={7} lg={10}>
                 <Paper
