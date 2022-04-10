@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Button from '@mui/material/Button';
 
 function ConnectButton() {
     const [currentAccount, setCurrentAccount] = useState("");
@@ -56,12 +57,12 @@ function ConnectButton() {
     return (
         <div display="flex" alignItems="center" borderRadius="xl" py="0">
             {!currentAccount && (
-                <button onClick={connectWallet}>
+                <Button variant="contained" onClick={connectWallet}>
                     Connect Wallet
-                </button>
+                </Button>
             )}
             {currentAccount && (
-                <button>
+                <Button variant="contained">
                     <p>
                         {currentAccount &&
                             `${currentAccount.slice(0, 6)}...${currentAccount.slice(
@@ -69,7 +70,7 @@ function ConnectButton() {
                             currentAccount.length
                         )}`}
                     </p>
-                </button>
+                </Button>
             )}
         </div>
     );

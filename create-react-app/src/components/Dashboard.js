@@ -22,6 +22,7 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import ConnectButton from './walletconnect'
 
 
 const theme = createTheme({
@@ -138,11 +139,7 @@ function DashboardContent() {
             >
               SDHacks
             </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+            <ConnectButton />
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
