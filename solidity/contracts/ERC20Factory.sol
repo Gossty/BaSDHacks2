@@ -3,7 +3,7 @@ pragma solidity >=0.8.9;
 
 import "./ERC20Token.sol";
 
-contract Factory {
+contract ERC20Factory {
     event ERC20TokenCreated(address tokenAddress);
 
     function deployNewERC20Token(

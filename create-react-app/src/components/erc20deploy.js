@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
 import { ethers } from "ethers";
-import './App.css';
-import abi from './utilities/WavePortal.json';
+import abi from '../utils/ERC20Factory.json';
 
 const Erc20deploy = () => {
   const [currentAccount, setCurrentAccount] = useState("");
   const [currentTxn, setCurrentTxn] = useState("");
   const [loading, setLoading] = useState(false);
-  const contractAddress = "0xC73c64968Eaeada140c2668dC53667a632105690";
+  const [tokenName, setTokenName] = useState("");
+  const [tokenTicker, setTokenTicker] = useState("");
+  const [initialSupply, setInitialSupply] = useState(0);
+  const contractAddress = "0x7810F66182Be650572EBBbd4b9D0b4C42D20Eb34";
   
   const contractABI = abi.abi;
 
@@ -55,8 +57,8 @@ const Erc20deploy = () => {
         * Execute the actual wave from your smart contract
         */
         setLoading(true);
-        const deployTxn = await deployContract.deployNewERC20Token("GOTHAM TOKEN", "GOTHAMTOKEN", 18, 20000000, { gasLimit: 300000 });
-        console.log("Mining...", waveTxn.hash);
+        const deployTxn = await deployContract.deployNewERC20Token(tokenName, tokenTicker, 18, initialSupply, { gasLimit: 3000000 });
+        console.log("Mining...", deployTxn.hash);
         setCurrentTxn(deployTxn.hash);
 
         await deployTxn.wait();
@@ -79,10 +81,6 @@ const Erc20deploy = () => {
   return (
     <div className="mainContainer">
       <div className="dataContainer">
-        <div className="header">
-        👋 Hey there!
-        </div>
-
         {loading && (
           <div>
             <div className="loadingContainer">
@@ -90,21 +88,33 @@ const Erc20deploy = () => {
             </div>
             <div className="loadingContainer">
               <br />
-              <p>Etherscan link of txn: https://https://polygonscan.com/tx/{currentTxn}</p>
+              <p>Etherscan link of txn: https://polygonscan.com/tx/{currentTxn}</p>
             </div>
           </div>
         )}
         {!loading && (
-          <form onSubmit={wave} className="formContainer">
+          <form onSubmit={deployNewERC20Token} className="formContainer">
             <label>
               <input
                 type="text"
-                value={waveTxt}
-                placeholder="Enter Message"
-                onChange={(e) => setWaveTxt(e.target.value)}
+                value={tokenName}
+                placeholder="Token Name(City Name)"
+                onChange={(e) => setTokenName(e.target.value)}
+              />
+              <input
+                type="text"
+                value={tokenTicker}
+                placeholder="Token Ticker"
+                onChange={(e) => setTokenTicker(e.target.value)}
+              />
+              <input
+                type="number"
+                value={initialSupply}
+                placeholder="Initial Supply"
+                onChange={(e) => setInitialSupply(e.target.value)}
               />
             </label>
-            <input type="submit" className="waveButton" value="Wave" />
+            <input type="submit" className="createERC20Buttton" value="Create Token" />
           </form>
         )}
       </div>
